@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-dm-sans: '';
+    --font-syne: '';
+    --font-jetbrains: '';
+  }
+
+  html {
+    background-color: #0A0A0A;
+    color: #F0EBE1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* Hide default cursor when custom cursor is active */
+  @media (pointer: fine) {
+    * { cursor: none !important; }
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar { width: 2px; }
+  ::-webkit-scrollbar-track { background: #0A0A0A; }
+  ::-webkit-scrollbar-thumb { background: #C8FF00; border-radius: 2px; }
+
+  /* Selection color */
+  ::selection { background: #C8FF00; color: #0A0A0A; }
+}
+
+@layer utilities {
+  .text-hero { font-size: clamp(56px, 9vw, 130px); }
+  .text-section { font-size: clamp(36px, 5vw, 72px); }
+  .tracking-editorial { letter-spacing: -0.04em; }
+  .section-divider { border-top: 1px solid rgba(255,255,255,0.08); }
+  .surface-bg { background-color: #111111; }
+  .overflow-clip { overflow: hidden; }  /* wrapper for SplitText lines */
+}
