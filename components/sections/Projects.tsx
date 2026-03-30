@@ -21,13 +21,13 @@ function ProjectImageCarousel({ images }: { images: string[] }) {
 
   return (
     <div className="relative w-full aspect-video rounded-lg overflow-hidden bg-surface group">
-      <AnimatePresence mode="wait">
+      <AnimatePresence>
         <motion.div
           key={active}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.3 }}
           className="absolute inset-0"
         >
           <Image

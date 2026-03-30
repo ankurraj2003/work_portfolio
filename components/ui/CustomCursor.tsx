@@ -6,10 +6,12 @@ export default function CustomCursor() {
   const dotRef = useRef<HTMLDivElement>(null)
   const ringRef = useRef<HTMLDivElement>(null)
   const [isHovering, setIsHovering] = useState(false)
+  const [isVisible, setIsVisible] = useState(false)
 
   useEffect(() => {
     // Only activate on devices with a precise pointer (mouse)
     if (!window.matchMedia('(pointer: fine)').matches) return
+    setIsVisible(true)
 
     let mouseX = 0, mouseY = 0
     let dotX = 0, dotY = 0
@@ -67,6 +69,8 @@ export default function CustomCursor() {
     }
   }, [])
 
+  if (!isVisible) return null
+
   return (
     <>
       <div
@@ -76,9 +80,8 @@ export default function CustomCursor() {
       />
       <div
         ref={ringRef}
-        className={`fixed top-0 left-0 z-[9998] pointer-events-none rounded-full border border-white/30 transition-all duration-300 ${
-          isHovering ? 'w-12 h-12 border-accent/60 scale-125' : 'w-10 h-10'
-        }`}
+        className={`fixed top-0 left-0 z-[9998] pointer-events-none rounded-full border border-white/30 transition-all duration-300 ${isHovering ? 'w-12 h-12 border-accent/60 scale-125' : 'w-10 h-10'
+          }`}
         style={{ willChange: 'transform' }}
       />
     </>
