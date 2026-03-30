@@ -1,10 +1,13 @@
+import dynamic from 'next/dynamic'
 import Hero from '@/components/sections/Hero'
-import Education from '@/components/sections/Education'
-import Experience from '@/components/sections/Experience'
-import Projects from '@/components/sections/Projects'
-import TechMarquee from '@/components/sections/TechMarquee'
-import Achievements from '@/components/sections/Achievements'
-import Footer from '@/components/ui/Footer'
+
+// Dynamically import below-the-fold components to reduce initial JS payload
+const Education = dynamic(() => import('@/components/sections/Education'))
+const TechMarquee = dynamic(() => import('@/components/sections/TechMarquee'))
+const Experience = dynamic(() => import('@/components/sections/Experience'))
+const Projects = dynamic(() => import('@/components/sections/Projects'))
+const Achievements = dynamic(() => import('@/components/sections/Achievements'))
+const Footer = dynamic(() => import('@/components/ui/Footer'))
 
 export default function Home() {
   return (
