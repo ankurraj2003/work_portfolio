@@ -7,7 +7,7 @@ export const personal = {
   email: 'rajguptaankur@gmail.com',
   github: 'https://github.com/ankurraj2003',
   linkedin: 'https://www.linkedin.com/in/ankurrajsahu/',
-  resume: 'https://drive.google.com/file/d/12iemlUxB5GQL0T4oJU35XTjAnESQwfuY/view?usp=sharing',
+  resume: 'https://drive.google.com/drive/folders/1Iw_JPnoR2QEPyKP-xoq-5BQ-fMqoKVYL?usp=sharing',
   website: 'https://ankurraj.vercel.app',
   stats: {
     experience: '1+',

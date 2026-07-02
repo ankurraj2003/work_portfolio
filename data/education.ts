@@ -8,8 +8,20 @@ export interface Education {
 export const education: Education[] = [
   {
     institution: 'Indian Institute of Information Technology, Sri City',
-    degree: 'B.Tech (Electronics and Communication Engineering)',
+    degree: 'Bachelor of Technology',
     dateRange: '2022 — 2026',
     logo: '/iiit.png',
+  },
+  {
+    institution: 'DAV Public School Hehal, Ranchi',
+    degree: 'Intermediate',
+    dateRange: '2019 — 2021',
+    logo: '/dav.jpg',
+  },
+  {
+    institution: 'Lady K.C. Roy Memorial School, Ranchi',
+    degree: 'Matriculation',
+    dateRange: '2017 - 2019',
+    logo: '/ladykc.jpg',
   },
 ]

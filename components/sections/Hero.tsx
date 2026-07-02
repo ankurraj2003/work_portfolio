@@ -17,8 +17,6 @@ export default function Hero() {
     if (prefersReduced || !headlineRef.current) return
 
     const split = new SplitText(headlineRef.current, { type: 'lines' })
-
-    // Wrap lines in overflow:hidden containers
     split.lines.forEach((line) => {
       const wrapper = document.createElement('div')
       wrapper.style.overflow = 'hidden'
@@ -34,7 +32,7 @@ export default function Hero() {
         duration: 1.1,
         ease: 'power4.out',
         stagger: 0.1,
-        delay: 1.6,   // fires after page curtain finishes
+        delay: 1.6,
       }
     )
   }, [])

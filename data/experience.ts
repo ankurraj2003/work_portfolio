@@ -9,13 +9,23 @@ export interface Experience {
 
 export const experience: Experience[] = [
   {
+    company: 'CoinDCX',
+    role: 'Intern - Engineering',
+    dateRange: 'May 2026 — Present',
+    location: 'Bengaluru, India',
+    logo: '/coindcx.png',
+    bullets: [
+      'To be Updated.....'
+    ],
+  },
+  {
     company: 'Freelance',
     role: 'Software Developer',
     dateRange: 'Nov 2025 — Present',
     location: 'India',
     logo: '/freelance.png',
     bullets: [
-      'Delivered 3+ production-grade applications, including e-commerce platforms and business portfolios, by managing the full software development lifecycle from requirements gathering to deployment. Utilizing a technical stack of React.js, Next.js, Node.js, Express.js, and MongoDB, I consistently provided high-quality, self-managed solutions that fostered client trust, resulting in repeat contracts and professional referrals.',
+      'Delivered 5+ production-grade applications, including e-commerce platforms and business portfolios, by managing the full software development lifecycle from requirements gathering to deployment. Utilizing a technical stack of React.js, Next.js, Node.js, Express.js, and MongoDB, I consistently provided high-quality, self-managed solutions that fostered client trust, resulting in repeat contracts and professional referrals.',
 
     ],
   },

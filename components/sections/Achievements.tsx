@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Award, Star, FileText, Briefcase } from 'lucide-react'
+import { Award, Star, FileText, Briefcase, ExternalLink } from 'lucide-react'
 import { useTextReveal } from '@/hooks/useTextReveal'
 import { achievements } from '@/data/achievements'
 import type { Achievement } from '@/data/achievements'
@@ -33,7 +33,7 @@ export default function Achievements() {
               Achievements
             </motion.span>
             <h2 className="achievements-reveal font-display font-bold text-text-primary tracking-editorial"
-                style={{ fontSize: 'clamp(32px, 4vw, 60px)' }}>
+              style={{ fontSize: 'clamp(32px, 4vw, 60px)' }}>
               Recognition &<br />Milestones
             </h2>
             <p className="text-text-secondary text-sm leading-relaxed mt-6 max-w-xs">
@@ -71,6 +71,17 @@ export default function Achievements() {
                   <p className="text-text-secondary text-sm leading-relaxed mt-1">
                     {item.description}
                   </p>
+                  {item.link && (
+                    <a
+                      href='https://ieeexplore.ieee.org/document/11555519'
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 mt-3 text-xs font-medium text-accent hover:text-white transition-colors duration-200"
+                    >
+                      <ExternalLink size={11} />
+                      View Paper
+                    </a>
+                  )}
                 </div>
 
                 {/* Year */}

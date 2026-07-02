@@ -3,6 +3,7 @@ export interface Achievement {
   description: string
   year: string
   iconType: 'award' | 'star' | 'cert' | 'work'
+  link?: string
 }
 
 export const achievements: Achievement[] = [
@@ -11,6 +12,7 @@ export const achievements: Achievement[] = [
     description: 'Authored a research paper “Deep Unfolded Hybrid Beamforming for NOMA- Enabled Joint Sensing and Communication” accepted for presentation at IEEE WCNC 2026, Malaysia.',
     year: '2026',
     iconType: 'award',
+    link: '#', // TODO: replace with actual IEEE/arXiv URL
   },
   {
     title: 'Hackathon Success',

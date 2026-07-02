@@ -3,7 +3,7 @@
 import {
   SiReact, SiNextdotjs, SiTypescript, SiNodedotjs,
   SiTailwindcss, SiPostgresql, SiMongodb, SiDocker,
-  SiPython, SiGit, SiVercel, SiJavascript, SiExpress, SiOpenai, SiSupabase
+  SiPython, SiGit, SiVercel, SiJavascript, SiExpress, SiOpenai, SiClaude
 } from 'react-icons/si'
 import { FaAws } from "react-icons/fa";
 
@@ -17,13 +17,14 @@ const techs = [
   { Icon: SiExpress, name: 'Express', color: '#06B6D4' },
   { Icon: SiPostgresql, name: 'PostgreSQL', color: '#4169E1' },
   { Icon: SiMongodb, name: 'MongoDB', color: '#47A248' },
-  { Icon: SiSupabase, name: 'Supabase', color: '#b1e25cff' },
   { Icon: SiDocker, name: 'Docker', color: '#2496ED' },
   { Icon: SiPython, name: 'Python', color: '#3776AB' },
   { Icon: SiGit, name: 'Git', color: '#F05032' },
   { Icon: SiVercel, name: 'Vercel', color: '#ffffff' },
-  { Icon: FaAws, name: 'Amazon', color: '#FFCA28' },
-  { Icon: SiOpenai, name: 'AI', color: '#ffffff' },
+  { Icon: FaAws, name: 'AWS', color: '#FFCA28' },
+  { Icon: SiOpenai, name: 'Artificial Intelligence', color: '#ffffff' },
+  { Icon: SiClaude, name: 'Claude', color: '#ff9900ff' },
+
 
 ]
 

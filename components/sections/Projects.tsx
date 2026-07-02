@@ -7,7 +7,7 @@ import { ExternalLink } from 'lucide-react'
 import { FaGithub } from 'react-icons/fa'
 import { useTextReveal } from '@/hooks/useTextReveal'
 import { projects } from '@/data/projects'
-import type { Project } from '@/data/projects'
+import type { Project, ProjectTag } from '@/data/projects'
 
 function ProjectImageCarousel({ images }: { images: string[] }) {
   const [active, setActive] = useState(0)
@@ -110,16 +110,18 @@ function ProjectRow({ project }: { project: Project }) {
 
         {/* Action buttons */}
         <div className="flex items-center gap-3">
-          <motion.a
-            href={project.githubUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            whileHover={{ scale: 1.03 }}
-            className="flex items-center gap-2 px-5 py-2.5 text-sm border border-[rgba(255,255,255,0.12)] rounded-full text-text-secondary hover:border-white/30 hover:bg-white/5 hover:text-text-primary transition-all duration-200"
-          >
-            <FaGithub size={14} />
-            View Code
-          </motion.a>
+          {project.githubUrl && (
+            <motion.a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.03 }}
+              className="flex items-center gap-2 px-5 py-2.5 text-sm border border-[rgba(255,255,255,0.12)] rounded-full text-text-secondary hover:border-white/30 hover:bg-white/5 hover:text-text-primary transition-all duration-200"
+            >
+              <FaGithub size={14} />
+              View Code
+            </motion.a>
+          )}
 
           <motion.a
             href={project.liveUrl}
@@ -134,6 +136,47 @@ function ProjectRow({ project }: { project: Project }) {
         </div>
       </motion.div>
     </motion.div>
+  )
+}
+
+const SECTIONS: { tag: ProjectTag; label: string }[] = [
+  { tag: 'Freelance', label: 'Freelance' },
+  { tag: 'Personal', label: 'Personal Project' },
+  { tag: 'Professional', label: 'Professional' },
+]
+
+function ProjectSubsection({ tag, label }: { tag: ProjectTag; label: string }) {
+  const group = projects.filter(p => p.tag === tag)
+  if (group.length === 0) return null
+
+  return (
+    <div className="mt-20 md:mt-28">
+      {/* Subsection heading */}
+      <motion.p
+        initial={{ opacity: 0, y: 8 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="font-sans text-sm text-text-muted tracking-[0.25em] uppercase mb-2"
+      >
+        {label}
+      </motion.p>
+      {/* Thin rule under the label */}
+      <motion.div
+        initial={{ scaleX: 0 }}
+        whileInView={{ scaleX: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+        style={{ transformOrigin: 'left' }}
+        className="h-px bg-[rgba(255,255,255,0.08)] mb-0"
+      />
+
+      <div className="flex flex-col">
+        {group.map(project => (
+          <ProjectRow key={project.id} project={project} />
+        ))}
+      </div>
+    </div>
   )
 }
 
@@ -159,11 +202,10 @@ export default function Projects() {
           Things I&apos;ve Built
         </h2>
 
-        <div className="flex flex-col">
-          {projects.map((project) => (
-            <ProjectRow key={project.id} project={project} />
-          ))}
-        </div>
+        {SECTIONS.map(({ tag, label }) => (
+          <ProjectSubsection key={tag} tag={tag} label={label} />
+        ))}
+
       </div>
     </section>
   )
