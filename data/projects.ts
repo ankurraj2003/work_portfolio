@@ -85,21 +85,20 @@ export const projects: Project[] = [
   {
     id: 3,
     number: '03',
-    title: 'Echelon Watches',
-    description: 'Echelon Watches is a luxury watch e-commerce platform offering a seamless shopping experience with an intuitive UI, powerful sorting features and an admin panel for easy management.',
+    title: 'Irshika Properties',
+    description: 'Discover the pinnacle of excellence in land ownership with Irshika Properties.',
     images: [
-      '/projects/echelon-watches/1.avif',
-      '/projects/echelon-watches/2.avif',
-      '/projects/echelon-watches/3.avif',
+      '/projects/irshika/i1.avif',
+      '/projects/irshika/i2.avif',
+      '/projects/irshika/i3.avif',
+      '/projects/irshika/i4.avif',
     ],
     techStack: [
-      { Icon: SiMongodb, name: 'MongoDB', color: '#47A248' },
-      { Icon: SiExpress, name: 'Express', color: '#ffffff' },
       { Icon: SiReact, name: 'React', color: '#61DAFB' },
-      { Icon: SiNodedotjs, name: 'Node.js', color: '#339933' },
       { Icon: SiTailwindcss, name: 'Tailwind', color: '#06B6D4' },
+      { Icon: SiMapbox, name: 'Mapbox', color: '#ffffff' },
     ],
-    liveUrl: 'https://echelonwatches.vercel.app',
+    liveUrl: 'https://www.irshikaproperties.in',
     tag: 'Freelance',
   },
   {
@@ -124,6 +123,27 @@ export const projects: Project[] = [
   {
     id: 5,
     number: '05',
+    title: 'Echelon Watches',
+    description: 'Echelon Watches is a luxury watch e-commerce platform offering a seamless shopping experience with an intuitive UI, powerful sorting features and an admin panel for easy management.',
+    images: [
+      '/projects/echelon-watches/1.avif',
+      '/projects/echelon-watches/2.avif',
+      '/projects/echelon-watches/3.avif',
+    ],
+    techStack: [
+      { Icon: SiMongodb, name: 'MongoDB', color: '#47A248' },
+      { Icon: SiExpress, name: 'Express', color: '#ffffff' },
+      { Icon: SiReact, name: 'React', color: '#61DAFB' },
+      { Icon: SiNodedotjs, name: 'Node.js', color: '#339933' },
+      { Icon: SiTailwindcss, name: 'Tailwind', color: '#06B6D4' },
+    ],
+    liveUrl: 'https://echelonwatches.vercel.app',
+    tag: 'Freelance',
+  },
+
+  {
+    id: 6,
+    number: '06',
     title: 'TEDxIIITS',
     description: 'Web portal designed to showcase the speaker lineup, events and information for the official TEDx IIITS.',
     images: [
@@ -141,8 +161,8 @@ export const projects: Project[] = [
     tag: 'Freelance',
   },
   {
-    id: 6,
-    number: '06',
+    id: 7,
+    number: '07',
     title: 'Pinnacle AI',
     description: 'Pinnacle AI is a multi-agent platform designed for Private Equity firms to monitor, analyze and benchmark P&L performance across a diverse portfolio.',
     images: [
@@ -161,8 +181,8 @@ export const projects: Project[] = [
     tag: 'Personal',
   },
   {
-    id: 7,
-    number: '07',
+    id: 8,
+    number: '08',
     title: 'GitSchema',
     description: 'Paste any public GitHub repository URL and instantly visualize its architecture, file dependencies, and API flow in an interactive map.',
     images: [
@@ -183,8 +203,8 @@ export const projects: Project[] = [
   },
 
   {
-    id: 8,
-    number: '08',
+    id: 9,
+    number: '09',
     title: 'Kira.AI',
     description: 'Kira.AI is a futuristic AI-powered chat application featuring advanced voice interaction, real-time 3D visualizations and seamless integration with the Google Gemini API.',
     images: [
@@ -202,8 +222,8 @@ export const projects: Project[] = [
     tag: 'Personal',
   },
   {
-    id: 9,
-    number: '09',
+    id: 10,
+    number: '10',
     title: 'The Empathy Engine',
     description: 'A web application that takes in arbitrary text, analyzes the underlying emotional sentiment in real-time and generates emotionally resonant Text-to-Speech (TTS) audio.',
     images: [
@@ -222,8 +242,8 @@ export const projects: Project[] = [
     tag: 'Personal',
   },
   {
-    id: 10,
-    number: '10',
+    id: 11,
+    number: '11',
     title: 'InfoIndia',
     description: 'Explore historic state-wise statistics of India including literacy rate, sex ratio, population and population density. Get accurate, in-depth insights on India\'s demographic evolution from 1981 to 2025.',
     images: [
@@ -241,5 +261,5 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/ankurraj2003/InfoIndia',
     liveUrl: 'https://infoindia.vercel.app',
     tag: 'Personal',
-  },
+  }
 ]

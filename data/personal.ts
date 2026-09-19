@@ -12,6 +12,6 @@ export const personal = {
   stats: {
     experience: '1+',
     projects: '10+',
-    clients: '4+',
+    clients: '5+',
   },
 }
